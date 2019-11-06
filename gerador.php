@@ -9,7 +9,8 @@
 	$codigo_secreto = $autenticador->createSecret();
 
 	$website = WEBSITE;
-	$titulo = "NaiguelGoogleAutenticador";
+	$titulo = "Naiguel - Google Autenticador";
+	$titulo = preg_replace('/\s+/', '', $titulo);
 	$url_qr_code = $autenticador->getQRCodeGoogleUrl( $titulo, $codigo_secreto, $website );
 
 ?>
