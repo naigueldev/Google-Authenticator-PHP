@@ -8,8 +8,8 @@
 
 	$codigo_secreto = $autenticador->createSecret();
 
-	$website = "http://localhost:8080/GoogleAuthenticatorPHP/";
-	$titulo = "Naiguel - Google Autenticador";
+	$website = WEBSITE;
+	$titulo = "NaiguelGoogleAutenticador";
 	$url_qr_code = $autenticador->getQRCodeGoogleUrl( $titulo, $codigo_secreto, $website );
 
 ?>
