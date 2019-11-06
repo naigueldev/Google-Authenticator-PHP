@@ -13,7 +13,7 @@
 				<h2 style="color:#0fad00">Success</h2>
 				<h3>Hello friend!</h3>
 				<p style="font-size:20px;color:#5C5C5C;">
-					Thank you for login.
+					Thanks for joining.
 				</p>
 				<br><br>
 			</div>

@@ -13,9 +13,6 @@ if(isset($_POST) && isset($_POST["codigosecreto"]) && isset($_POST["codigo"])){
 
 	$resultado = $autenticador->verifyCode( $codigo_secreto, $codigo_verificador, 0 );
 
-	
-	// $response = ( $resultado ) ? array("return"=>true, "msg"=>"Código Válido") : array("return"=>false, "msg"=>"Invalid Code");	
-	// echo json_encode($response);
 
 	if( $resultado ){?>
 		<script type="text/javascript">
