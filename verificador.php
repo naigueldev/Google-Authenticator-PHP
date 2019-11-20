@@ -1,9 +1,8 @@
 <?php
 if(isset($_POST) && isset($_POST["codigosecreto"]) && isset($_POST["codigo"])){
-	require_once( 'defines.php' );
-	require_once( 'vendor/autoload.php' );
 
-	require_once( 'vendor/PHPGangsta/GoogleAuthenticator.php' );
+	require_once( 'defines.php' );
+	require_once( 'Classes/GoogleAuthenticator.php' );
 
 	$autenticador = new GoogleAuthenticator();
 
@@ -11,7 +10,7 @@ if(isset($_POST) && isset($_POST["codigosecreto"]) && isset($_POST["codigo"])){
 
 	$codigo_verificador = $_POST["codigo"];
 
-	$resultado = $autenticador->verifyCode( $codigo_secreto, $codigo_verificador, 0 );
+	$resultado = $autenticador->verifyCode($codigo_secreto, $codigo_verificador, 2 );
 
 
 	if( $resultado ){?>

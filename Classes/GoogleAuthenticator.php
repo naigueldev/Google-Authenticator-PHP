@@ -1,14 +1,5 @@
 <?php
-
-    /*
-    * PHP Class for handling Google Authenticator 2-factor authentication
-    *
-    * @author Michael Kliewe
-    * @copyright 2012 Michael Kliewe
-    * @license http://www.opensource.org/licenses/bsd-license.php BSD License
-    * @link http://www.phpgangsta.de/
-    */
-
+  
     class GoogleAuthenticator{
 
         protected $_codeLength = 6;
@@ -190,7 +181,7 @@
             if (!in_array($paddingCharCount, $allowedValues)) return false;
 
             for ($i = 0; $i < 4; $i++){
-
+                
                 if ($paddingCharCount == $allowedValues[$i] &&
                 substr($secret, -($allowedValues[$i])) != str_repeat($base32chars[32], $allowedValues[$i])) return false;
             
